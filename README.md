@@ -1,69 +1,66 @@
-# React + TypeScript + Vite
+# 🎬 Video Library (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Video Library app built with React, Node/Express, and MongoDB.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Upload and manage videos
+- View video player with thumbnails
+- Categories and views
+- MongoDB backend with Express APIs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- React + Tailwind CSS (Frontend)
+- Node.js + Express (Backend)
+- MongoDB (Database)
 
-## Expanding the ESLint configuration
+## ▶️ Run Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone repo:
+   ```bash
+   git clone https://github.com/MaheshManchepelli/video-library.git
+git branch -M main
+git push -u origin main
+   cd video-library
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+cd backend
+npm install
+cd ../frontend
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Start backend:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+cd backend
+node server.js
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+4. Start frontend:
+
+cd frontend
+npm start
+
+
+5. Open http://localhost:3000
+
+
+---
+
+## 🛠 Step 3: Make It Accessible Online
+
+You have **2 parts** → Frontend (React) + Backend (Express/Mongo).  
+
+- **Frontend (React):**  
+  - Deploy on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).  
+
+- **Backend (Express + MongoDB):**  
+  - Deploy on [Render](https://render.com/) or [Railway](https://railway.app/).  
+  - Or use [MongoDB Atlas](https://www.mongodb.com/atlas/database) for a free cloud MongoDB.
+
+👉 Example flow:
+1. Push backend to GitHub → connect it to **Render** → it gives you a live API URL.  
+2. Push frontend to GitHub → connect it to **Vercel/Netlify** → update API calls to use the live backend URL instead of `http://localhost:5000`.  
+3. Done 🎉 anyone can access it.
+
+---
